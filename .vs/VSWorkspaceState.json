@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Http\\Controllers\\Auth",
+    "\\app\\Providers",
+    "\\config",
+    "\\public",
+    "\\public\\css",
+    "\\public\\js"
+  ],
+  "SelectedNode": "\\app\\Http\\Controllers\\Auth\\SocialAuthController.php",
+  "PreviewInSolutionExplorer": false
+}
