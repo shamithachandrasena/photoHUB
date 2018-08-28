@@ -5,12 +5,14 @@
     "\\app\\Http",
     "\\app\\Http\\Controllers",
     "\\app\\Http\\Controllers\\Auth",
-    "\\app\\Providers",
     "\\config",
-    "\\public",
-    "\\public\\css",
-    "\\public\\js"
+    "\\database",
+    "\\database\\migrations",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\auth",
+    "\\resources\\views\\layouts",
+    "\\routes"
   ],
-  "SelectedNode": "\\app\\Http\\Controllers\\Auth\\SocialAuthController.php",
   "PreviewInSolutionExplorer": false
 }
