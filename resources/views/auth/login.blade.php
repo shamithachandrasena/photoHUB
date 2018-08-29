@@ -64,17 +64,9 @@
 						<div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 
-                                <a class="btn btn-link" href="{{ url('socialauth/github') }}">
-                                    <i class="fab fa-github fa-3x"></i>
-                                </a>
-								<a class="btn btn-link" href="{{ url('socialauth/facebook') }}">
-                                    <i class="fab fa-facebook-square fa-3x"></i>
-                                </a>
-								<a class="btn btn-link" href="{{ url('socialauth/google') }}">
+                               
+								<a class="btn btn-link" href="{{ url('auth/google') }}">
                                     <i class="fab fa-google-plus fa-3x"></i>
-                                </a>
-								<a class="btn btn-link" href="{{ url('socialauth/twitter') }}">
-                                    <i class="fab fa-twitter-square fa-3x"></i>
                                 </a>
                             </div>
 

@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('socialauth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
-Route::get('socialauth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
+Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider')->where('social','github');
+Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->where('social','github');;
