@@ -1,4 +1,16 @@
 <?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+//use App\Album;
+//use App\Image;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
+
+
 class ImagesController extends BaseController{
 
   public function getForm($id)
