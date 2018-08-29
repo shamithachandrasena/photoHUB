@@ -18,10 +18,10 @@
           <span class="icon-bar"></span>
           <span lclass="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Awesome Albums</a>
+        <a class="navbar-brand" href="/">PhotoHUB Albums</a>
         <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><ahref="{{URL::route('create_album_form')}}">CreateNew Album</a></li>
+            <li class="active"><ahref="{{URL::route('create_album_form')}}">Create New Album</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -29,7 +29,7 @@
     <div class="container" style="text-align: center;">
       <div class="span4" style="display: inline-block;margin-top:100px;">
 
-        @if($errors->has())
+        @if($errors->has('test'))
           <div class="alert alert-block alert-error fade in"id="error-block">
              <?php
              $messages = $errors->all('<li>:message</li>');
@@ -47,6 +47,7 @@
         @endif
 
         <form name="createnewalbum" method="POST"action="{{URL::route('create_album')}}"enctype="multipart/form-data">
+        {{ csrf_field() }}
           <fieldset>
             <legend>Create an Album</legend>
             <div class="form-group">
@@ -55,11 +56,11 @@
             </div>
             <div class="form-group">
               <label for="description">Album Description</label>
-              <textarea name="description" type="text"class="form-control" placeholder="Albumdescription">{{Input::old('descrption')}}</textarea>
+              <textarea name="description" type="text"class="form-control" placeholder="Albumdescription">{{old('descrption')}}</textarea>
             </div>
             <div class="form-group">
               <label for="cover_image">Select a Cover Image</label>
-              {{Form::file('cover_image')}}
+              <input type="file" name="cover_image">
             </div>
             <button type="submit" class="btnbtn-default">Create!</button>
           </fieldset>
