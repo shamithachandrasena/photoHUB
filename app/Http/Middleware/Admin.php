@@ -1,4 +1,3 @@
-@ -0,0 +1,26 @@
 <?php
 
 namespace App\Http\Middleware;
@@ -21,7 +20,7 @@ class Admin
         if (Auth::check() && Auth::user()->isAdmin()) {
             return $next($request);  
         }
-        return redirect('/home');
+        return redirect('/index');
        
     }
 }
