@@ -31,3 +31,4 @@ Route::get('/deletealbum/{id}', array('as' => 'delete_album','uses' => 'AlbumsCo
 Route::get('/album/{id}', array('as' => 'show_album','uses' => 'AlbumsController@getAlbum'));
 Route::post('/moveimage', array('as' => 'move_image','uses' => 'ImagesController@postMove'));
 Auth::routes();
+Route::get('/admin','AdminController@index')->name('admin');
