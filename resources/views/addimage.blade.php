@@ -1,17 +1,6 @@
-<!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Laravel PHP Framework</title>
-    <!-- Latest compiled and minified CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    
+@extends('layouts.app')
+
+  @section('content')    
     <div class="container" style="text-align: center;">
       <div class="span4" style="display: inline-block;margin-top:100px;">
         @if($errors->has(1))
@@ -48,5 +37,4 @@
         </form>
       </div>
     </div> <!-- /container -->
-  </body>
-</html>
+  @endsection 

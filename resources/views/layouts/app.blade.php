@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'PhotoHUB') }}</title>
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -31,8 +32,18 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'PhotoHUB') }}
                     </a>
+                    <button type="button" class="navbar-toggle"data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+           
+                    <a class="navbar-brand" href="index">Albums</a>
+                   
+                    <a class="navbar-brand" style="color:blue;" href="{{URL::route('create_album_form')}}">Create New</a>
+                  
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -72,7 +83,6 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
 
