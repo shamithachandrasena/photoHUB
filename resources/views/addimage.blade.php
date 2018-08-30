@@ -37,7 +37,7 @@
             <legend>Add an Image to {{$album->name}}</legend>
             <div class="form-group">
               <label for="description">Image Description</label>
-              <textarea name="description" type="text"class="form-control" placeholder="Imagedescription"></textarea>
+              <textarea name="description" type="text"class="form-control" placeholder="Image Description"></textarea>
             </div>
             <div class="form-group">
               <label for="image">Select an Image</label>
