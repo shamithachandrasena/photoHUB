@@ -37,7 +37,7 @@ Auth::routes();
 
 
 Route::group(['middleware'=>['auth','admin']],function(){
-    Route::get('/admin', function(){return view('admin');});
+    Route::get('/admin', 'AdminController@index')->name('admin');
     Route::get('/deleteimage/{id}', array('as' => 'delete_image','uses' => 'ImagesController@getDelete'));
     Route::get('/deletealbum/{id}', array('as' => 'delete_album','uses' => 'AlbumsController@getDelete'));
 
