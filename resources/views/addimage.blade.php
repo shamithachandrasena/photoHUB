@@ -14,7 +14,7 @@
     
     <div class="container" style="text-align: center;">
       <div class="span4" style="display: inline-block;margin-top:100px;">
-        @if($errors->has())
+        @if($errors->has(1))
           <div class="alert alert-block alert-error fade in"id="error-block">
             <?php
             $messages = $errors->all('<li>:message</li>');
