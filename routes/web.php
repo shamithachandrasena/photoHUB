@@ -30,5 +30,15 @@ Route::post('/createalbum', array('as' => 'create_album','uses' => 'AlbumsContro
 Route::get('/deletealbum/{id}', array('as' => 'delete_album','uses' => 'AlbumsController@getDelete'));
 Route::get('/album/{id}', array('as' => 'show_album','uses' => 'AlbumsController@getAlbum'));
 Route::post('/moveimage', array('as' => 'move_image','uses' => 'ImagesController@postMove'));
+
 Auth::routes();
-Route::get('/admin','AdminController@index')->name('admin');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+
+Route::group(['middleware'=>['auth','admin']],function(){
+    Route::get('/admin', function(){return view('admin');});
+});
+
