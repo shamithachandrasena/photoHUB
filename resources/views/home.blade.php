@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are succesfully logged in!
+
+                    Welcome to the PhotoHub!
+                    
+                    Now you can create Albums and Upload photos to PhotoHUB
                 </div>
             </div>
         </div>

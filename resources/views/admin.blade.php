@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in As Admin!
+                    Welcome Administrator!
+
+                    You can create Albums and Upload photos to PhotoHUB
+                    
+                    Also you can delete the images and albums
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ class Admin
         if (Auth::check() && Auth::user()->isAdmin()) {
             return $next($request);  
         }
-        return redirect('/index');
+        return redirect('/home');
        
     }
 }
