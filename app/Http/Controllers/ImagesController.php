@@ -54,7 +54,25 @@ class ImagesController extends BaseController{
   public function getDelete($id)
   {
     $image = Image::find($id);
+
     $image->delete();
+    
     return Redirect::route('show_album',array('id'=>$image->album_id));
+  }
+  public function postMove()
+  {
+    $rules = array(
+      'new_album' => 'required|numeric|exists:albums,id',
+      'photo'=>'required|numeric|exists:images,id'
+    );
+    $validator = Validator::make(Input::all(), $rules);
+    if($validator->fails()){
+    
+      return Redirect::route('index');
+    }
+    $image = Image::find(Input::get('photo'));
+    $image->album_id = Input::get('new_album');
+    $image->save();
+    return Redirect::route('show_album',array('id'=>Input::get('new_album')));
   }
 }
