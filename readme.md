@@ -20,7 +20,7 @@ There are three tyepes of people who access system
 * Registered users
 * Guests, who are not registered with the system
 
-Registered users can create albums and upload photos to PhotoHUB. Administrators can do what registered users can do plus,deleting the images and albums. The unregistered users can do only viewing the albums and images.
+Registered users can create albums and upload photos to PhotoHUB. Administrators can do what registered users can do plus,deleting and modifying the images and albums. The unregistered users can do only viewing the albums and images. 
 
 #### Work Lord Matrix
 | Task | Done by |
@@ -30,7 +30,7 @@ Registered users can create albums and upload photos to PhotoHUB. Administrators
 |Social login|Mr. W.M.C.J.T. KITHULWATTA| 
 |Validate photo and assigning photo to album|Miss. M. KARTHIKA| 
 |Create Album model and db migration for albums| Mr. T.L. YASARATHNA| 
-|Merging, conflict resolving, middleware for role management, testing, debugging |Mr. P.G.D.S.D. CHANDRASENA| 
+|Merging, conflict resolving, middleware for role management,update,testing, debugging |Mr. P.G.D.S.D. CHANDRASENA| 
 |Moving photo between albums, index template|Mr. SIYAM KHAN| 
 |Adding template for create album|Mr. A. ROOHUL| 
 
