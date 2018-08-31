@@ -71,4 +71,43 @@ class AlbumsController extends Controller
   
       return Redirect::route('index');
     }
+
+    public function getUpdate($id){
+      
+      $album = Album::with('Photos')->find($id);
+      return View::make('updatealbum')->with('album',$album);
+
+    }
+
+    public function putUpdate(){
+      
+      $rules = array(
+  
+        'name' => 'required',
+        'cover_image'=>'required|image'
+  
+      );
+      
+      $validator = Validator::make(Input::all(), $rules);
+      
+      if($validator->fails()){
+        return Redirect::route('index');
+      }
+  
+      $file = Input::file('cover_image');
+      $random_name = str_random(8);
+      $destinationPath = 'albums/';
+      $extension = $file->getClientOriginalExtension();
+      $filename=$random_name.'_cover.'.$extension;
+      $uploadSuccess = Input::file('cover_image')
+      ->move($destinationPath, $filename);
+      $album = new Album();
+        $album->name = Input::get('name');
+        $album->description = Input::get('description');
+        $album->cover_image =  $filename;
+      $album->save();
+
+      return Redirect::route('index');
+    }
+   
 }

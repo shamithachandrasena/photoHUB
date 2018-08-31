@@ -12,6 +12,7 @@
           <h2 class="media-heading" style="font-size: 26px;">Album Description :</h2> <p>{{$album->description}}<p>
           <a href="{{URL::route('add_image',array('id'=>$album->id))}}"><button type="button"class="btn btn-primary btn-large">Add Image</button></a>
           <a href="{{URL::route('delete_album',array('id'=>$album->id))}}" onclick="return confirm('Are you sure?')"><button type="button"class="btn btn-danger btn-large">Delete Album</button></a>
+          <a href="{{URL::route('update_album',array('id'=>$album->id))}}"><button type="button"class="btn btn-primary btn-large">Update Album</button></a>
         </div>
       </div>
     </div>

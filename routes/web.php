@@ -50,3 +50,7 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/createalbum', array('as' => 'create_album_form','uses' => 'AlbumsController@getForm'));
     Route::post('/createalbum', array('as' => 'create_album','uses' => 'AlbumsController@postCreate'));
 });
+
+// Route::get('/updateimage/{id}', array('as' => 'update_image','uses' => 'ImagesController@getUpdate'));
+Route::get('/updatealbum/{id}', array('as' => 'update_album','uses' => 'AlbumsController@getUpdate'));
+Route::post('/updatealbum', array('as' => 'update_album_form','uses' => 'AlbumsController@putUpdate'));
