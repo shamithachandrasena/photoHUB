@@ -26,6 +26,7 @@ For the convenience- an Administrative user is already created and his credentia
 Username : test
 E-mail   : test@test.com
 Password : test123
+The database backup is also added into the root folder called 'testphotohub.sql'
 
 #### Work Lord Matrix
 | Task | Done by |
