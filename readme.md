@@ -22,6 +22,11 @@ There are three tyepes of people who access system
 
 Registered users can create albums and upload photos to PhotoHUB. Administrators can do what registered users can do plus,deleting and modifying the images and albums. The unregistered users can do only viewing the albums and images. 
 
+For the convenience- an Administrative user is already created and his credentials are as below,
+Username : test
+E-mail   : test@test.com
+Password : test123
+
 #### Work Lord Matrix
 | Task | Done by |
 | ------------- | ------------- |
