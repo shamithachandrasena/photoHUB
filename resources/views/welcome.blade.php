@@ -1,3 +1,4 @@
+@extends('admin.layout')
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>

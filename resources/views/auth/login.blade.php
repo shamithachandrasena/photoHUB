@@ -1,6 +1,39 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Admin Dashboard</div>
+
+                   
+                    <form class="form-horizontal" action="#" method="POST" role="form">
+                    <div class="form-group">
+                    <div class="col-md-12">
+                    <input type="email" name="email" placeholder="Example@gmail.com" class="form-control">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <div class="col-md-12">
+                    <input type="password" name="password" placeholder="password" class="form-control">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <div class="col-md-12">
+                    <input type="submit" name="Login" class="btn btn-primary">
+                    </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+
+
+@section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
