@@ -21,6 +21,7 @@
                     </div>
                     <div class="form-group">
                     <div class="col-md-12">
+                    <input type="hidden" name="token" value="{{csrf_token()}}">
                     <input type="submit" name="Login" class="btn btn-primary">
                     </div>
                     </div>
