@@ -40,7 +40,8 @@ Route::group(['middleware'=>['auth','admin']],function(){
     Route::get('/admin', 'AdminController@index')->name('admin');
     Route::get('/deleteimage/{id}', array('as' => 'delete_image','uses' => 'ImagesController@getDelete'));
     Route::get('/deletealbum/{id}', array('as' => 'delete_album','uses' => 'AlbumsController@getDelete'));
-
+    Route::get('/updatealbum/{id}', array('as' => 'update_album','uses' => 'AlbumsController@getUpdate'));
+    Route::post('/updatealbum', array('as' => 'update_album_form','uses' => 'AlbumsController@putUpdate'));
 });
 
 
@@ -51,6 +52,3 @@ Route::group(['middleware'=>['auth']],function(){
     Route::post('/createalbum', array('as' => 'create_album','uses' => 'AlbumsController@postCreate'));
 });
 
-// Route::get('/updateimage/{id}', array('as' => 'update_image','uses' => 'ImagesController@getUpdate'));
-Route::get('/updatealbum/{id}', array('as' => 'update_album','uses' => 'AlbumsController@getUpdate'));
-Route::post('/updatealbum', array('as' => 'update_album_form','uses' => 'AlbumsController@putUpdate'));
